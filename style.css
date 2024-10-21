@@ -1,0 +1,434 @@
+/*
+Theme Name: Recettes Gourmandes
+Theme URI: https://derbyneon.github.io/recettes-gourmandes/
+Author: Votre Nom
+Author URI: https://derbyneon.github.io/
+Description: Un thème WordPress personnalisé pour un site de recettes.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: recettes-gourmandes
+*/
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* En-tête */
+.site-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.site-title a {
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-search {
+    margin-right: 1rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-field {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.search-submit {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+.user-actions a {
+    color: #fff;
+}
+
+.user-profile img {
+    border-radius: 50%;
+}
+
+/* Navigation principale */
+.main-navigation {
+    background-color: #f8f8f8;
+    padding: 0.5rem 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Contenu principal */
+.site-main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Pied de page */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Styles spécifiques aux recettes */
+.recipe-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 60%; /* Définit la largeur à 40% */
+    float: left; /* Aligne à gauche */
+    margin-bottom: 20px; /* Espace en bas entre les articles */
+}
+
+@media (max-width: 768px) {
+    .recipe-card {
+        width: 100%; /* Passe à 100% sur les écrans plus petits */
+    }
+}
+
+.recipe-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-meta {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.recipe-rating .star {
+    color: #ffd700;
+}
+
+/* Formulaires */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0052a3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .header-right {
+        margin-top: 1rem;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+}
+
+
+
+
+
+/* Styles pour la page d'accueil */
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.cta {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #414142;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero, .cta {
+        padding: 50px 0;
+    }
+}
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: #333;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a, .social-links a {
+    color: #ccc;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.footer-menu a:hover, .social-links a:hover {
+    color: #fff;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+}
+
+.newsletter-form button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.footer-menu-list,
+.footer-category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-menu-list li,
+.footer-category-list li {
+    margin-bottom: 5px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+}
